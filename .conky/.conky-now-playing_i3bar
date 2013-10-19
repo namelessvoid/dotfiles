@@ -1,0 +1,11 @@
+out_to_console yes
+out_to_x no
+total_run_times 0
+#//no_buffers yes
+update_interval 10
+uppercase no
+if_up_strictness address
+use_spacer left
+
+TEXT
+${if_running mocp}${exec mocp -Q "%song"} - ${exec mocp -Q "%album"} - ${exec mocp -Q "%artist"}${else} ${endif}

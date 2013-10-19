@@ -1,0 +1,26 @@
+out_to_console yes
+out_to_x no
+total_run_times 0
+#//no_buffers yes
+update_interval 1
+uppercase no
+if_up_strictness address
+#use_spacer left
+
+TEXT
+#^fg(gray)^fg(yellow) CPU: ^fg(red)${cpu cpu1}%^fg(darkred)@^fg(red)${freq cpu1}^fg(darkred)MHz 
+#^fg(red)${cpu cpu2}%^fg(darkred)@^fg(red)${freq cpu2}^fg(darkred)MHz (^fg(red)${ibm_temps 
+#0}^fg(darkred)°C)\
+#^fg(gray) |^fg(yellow) Mem: 
+#^fg(red)${mem}^fg(darkred)/^fg(red)${memmax}^fg(darkred)(^fg(red)${memperc}^fg(darkred)%)\
+#^fg(gray) |^fg(yellow) Fan: ^fg(red)${ibm_fan}^fg(darkred)rpm \
+#^fg(gray) |^fg(yellow) Bat: ^fg(red)${battery_percent}^fg(darkred)%\
+#^fg(gray) |^fg(\#5555ff) ${time %a, %d. %b %k:%M:%S}^fg(gray)
+
+#without dzen color codes
+CPU: ${cpu cpu1}%@${freq cpu1}MHz ${cpu cpu2}%@${freq cpu2}MHz (${ibm_temps #0}°C)\
+ | Mem: ${mem}/${memmax}(${memperc}%)\
+ | Fan: ${ibm_fan}rpm \
+ | Bat: ${battery_percent}%\
+ | ${time %a, %d. %b %k:%M:%S}
+
