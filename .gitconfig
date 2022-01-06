@@ -4,6 +4,9 @@
 
 [core]
 	editor = vim
+	
+[pull]
+	rebase = true
 
 [color]
     status = auto
